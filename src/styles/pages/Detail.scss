@@ -1,0 +1,59 @@
+$메인칼라: black;
+.red {
+  color: $메인칼라;
+}
+
+.wow-enter {
+  opacity: 0;
+}
+
+.wow-enter-active {
+  opacity: 1;
+  transition: all 500ms;
+}
+
+@mixin 함수() {
+  background: #f3f3f3;
+  color: #303030;
+  padding: 15px;
+  border-radius: 5px;
+  width: 100%;
+  font-weight: bold;
+  margin: auto;
+}
+.my-alert {
+  @include 함수();
+  &-hide {
+    @extend .my-alert;
+    opacity: 0;
+    transition: all 500ms;
+  }
+}
+.my-alert p {
+  margin-bottom: 0;
+}
+
+#recentBox {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 10%;
+  left: 50%;
+  overflow-x: 5px;
+  transform: translate(-50%, 0%);
+}
+
+.title {
+  font-weight: bold;
+  width: 100%;
+}
+.imgWrapper {
+  position: relative;
+  width: 100px;
+  cursor: pointer;
+}
+.img {
+  width: 100%;
+}
